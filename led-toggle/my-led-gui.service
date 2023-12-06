@@ -1,0 +1,12 @@
+[Unit]
+Description=This is a tkinter gui to blink led 21 on start up
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/Desktop/workshop1/led-toggle/gui.py
+Restart=on-failure
+RestartSec=5
+Environment="DISPLAY=:0"
+User=pi
+
+[Install]
+WantedBy=graphical.target
